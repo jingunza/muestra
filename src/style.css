@@ -32,7 +32,7 @@
   text-align: left;
 }
 
-.palo-bajo {
+.invert {
   -ms-transform: rotate(180deg); /* IE 9 */
   transform: rotate(180deg);
 }
@@ -40,7 +40,8 @@
 .numero-div {
   height: 16rem;
 }
-.numero-span {
+
+#numerospan {
   font-size: 8rem;
   line-height: 6rem;
 }
