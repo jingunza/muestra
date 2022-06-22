@@ -1,1 +1,46 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+.card {
+  padding: 1rem;
+  margin-top: 1rem;
+  background: white;
+  border-radius: 1.2rem;
+  width: 18rem;
+  height: 26rem;
+}
+
+.spade {
+  color: black;
+  font-size: 6rem;
+  line-height: 4rem;
+  text-align: left;
+}
+.club {
+  color: black;
+  font-size: 6rem;
+  line-height: 4rem;
+  text-align: left;
+}
+.heart {
+  color: red;
+  font-size: 6rem;
+  line-height: 4rem;
+  text-align: left;
+}
+.diamond {
+  color: red;
+  font-size: 6rem;
+  line-height: 4rem;
+  text-align: left;
+}
+
+.palo-bajo {
+  -ms-transform: rotate(180deg); /* IE 9 */
+  transform: rotate(180deg);
+}
+
+.numero-div {
+  height: 16rem;
+}
+.numero-span {
+  font-size: 8rem;
+  line-height: 6rem;
+}
