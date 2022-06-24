@@ -17,10 +17,8 @@
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
-    <link
-      rel="stylesheet"
-      href="./style.css"
-    />
+    <link rel="stylesheet" href="style.css">
+    <script src="./app.js"></script>
   </head>
   <body>
     <div class="container-fluid bg-success w-100 m-0 p-0" style="height: 50rem">
@@ -43,7 +41,7 @@
         <button class="btn btn-primary" id="genere">Genere otra carta</button>
       </div>
     </div>
-
+    
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
       integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
@@ -54,7 +52,50 @@
       integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
       crossorigin="anonymous"
     ></script>
-    <script src="./app.js"></script>
+    <script>
+      window.onload = function() {
+  //write your code here
+  randomCard();
+};
+let arrayNumero = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+let symbol = ["♦", "♥", "♠", "♣"];
+const randomCard = () => {
+  let paloRandom = Math.floor(Math.random() * 4 + 1);
+  let numeroRandom = Math.floor(Math.random() * 13);
+  let paloAltoLugar = document.querySelector("#palo-alto");
+  let paloBajoLugar = document.querySelector("#palo-bajo");
+  let numeroLugar = document.querySelector("#numerospan");
+  if (paloRandom == 1) {
+    paloAltoLugar.innerHTML = symbol[0];
+    paloBajoLugar.innerHTML = symbol[0];
+    paloAltoLugar.classList.add("diamond");
+    paloBajoLugar.classList.add("diamond");
+  } else if (paloRandom == 2) {
+    paloAltoLugar.innerHTML = symbol[1];
+    paloBajoLugar.innerHTML = symbol[1];
+    paloAltoLugar.classList.add("heart");
+    paloBajoLugar.classList.add("heart");
+  } else if (paloRandom == 3) {
+    paloAltoLugar.innerHTML = symbol[2];
+    paloBajoLugar.innerHTML = symbol[2];
+    paloAltoLugar.classList.add("spade");
+    paloBajoLugar.classList.add("spade");
+  } else if (paloRandom == 4) {
+    paloAltoLugar.innerHTML = symbol[3];
+    paloBajoLugar.innerHTML = symbol[3];
+    paloAltoLugar.classList.add("club");
+    paloBajoLugar.classList.add("club");
+  }
+  numeroLugar.innerHTML = arrayNumero[numeroRandom];
+};
+let boton = document.querySelector("button");
+boton.addEventListener("click", function() {
+  location.reload();
+});
+setTimeout(function() {
+  location.reload();
+}, 10000);
+    </script>
     
   </body>
 </html>
